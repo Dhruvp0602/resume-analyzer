@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="p-3 flex bg-white justify-between items-center fixed top-0 left-0 right-0 z-20 shadow-md">
+        <a href="index.html" id="brand" class="flex gap-2 items-center flex-1">
+            <img class="object-cover max-w-12 max-h-12" src="./assets/asset 0.png" alt="Logo">
+            <span class="text-lg font-semibold font-display">SkillScan</span>
+        </a>
+        <div id="nav-menu" class="hidden lg:flex gap-12">
+            <a href="find_roadmap.html" class="font-medium hover:text-primary">Find Roadmap</a>
+            <a href="aboutus.html" class="font-medium hover:text-primary">About Us</a>
+            <a href="how_it_works.html" class="font-medium hover:text-primary">How It Works</a>
+            <a href="pricing.html" class="font-medium hover:text-primary">Pricing</a>
+            <a href="contactus.html" class="font-medium hover:text-primary">Contact Us</a>
+            <a href="faqs.html" class="font-medium hover:text-primary">FAQs</a>
+        </div>
+        <div class="hidden lg:flex flex-1 justify-end">
+            <a href="signup.html">
+            <button class="flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600">
+                <img src="./assets/asset 1.svg" alt="">
+                <span class="font-display font-medium">Login / Sign up</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            </a>
+        </div>
+
+
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars text-gray-600"></i>
+        </button>
+
+        <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-white inset-0 p-3">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="index.html" id="brand" class="flex gap-2 items-center">
+                    <img class="object-cover max-w-12 max-h-12" src="./assets/asset 0.png" alt="Logo">
+                    <span class="text-lg font-medium font-display">SkillScan</span>
+                </a>
+                <button class="p-2 md:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark text-gray-600"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+                <a href="find_roadmap.html" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Find Roadmap</a>
+                <a href="aboutus.html" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">About Us</a>
+                <a href="how_it_works.html" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">How It Works</a>
+                <a href="pricing.html" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Pricing</a>
+                <a href="contactus.html" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">Contact Us</a>
+                <a href="faqs.html" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg">FAQs</a>
+
+            </div>
+            <div class="h-[1px] bg-gray-300"></div>
+            <a href="signup.html">
+            <button class="mt-6 w-full flex gap-2 items-center  px-6 py-4 rounded-lg hover:bg-gray-50">
+                <img src="./assets/asset 1.svg" alt="">
+                <span>Login / Sign up</span>
+            </button>
+            </a>
+        </div>
+
+    </nav>
+    <!-- Main -->
+    <main class="mt-16">
+        <!-- Hero section -->
+        <div id="hero" class="min-h-screen bg-gradient-to-b from-purple-50 via-orange-50 to-transparent">
+            <div id="hero-container"
+                class="max-w-4xl mx-auto px-6 pt-6 pb-16 flex flex-col sm:items-center sm:text-center sm:pt-12 sm:max-w-2xl">
+                <div id="version-text"
+                    class="flex items-center my-6 gap-2 border border-yellow-300 
+                bg-yellow-50 rounded-lg px-3 py-1 w-fit shadow-md hover:shadow-lg hover:-translate-y-1 transition group">
+                    <div class="w-2 h-2 bg-yellow-400 rounded-full border border-yellow-600"></div>
+                    <p class="font-display font-medium text-yellow-600">v0.21.1: <span
+                            class="text-yellow-800"> New: Skill Gap Detection Added</span></p>
+                    <i
+                        class="fa-solid fa-arrow-right text-yellow-600 group-hover:translate-x-1 transition duration-300"></i>
+                </div>
+                <div id="hero-features" class="hidden sm:flex gap-8 my-6">
+                    <div class="flex justify-center gap-2 items-center text-gray-500">
+                        <i class="fa-solid fa-brain"></i>
+                        <p>Smart Evaluation</p>
+                    </div>
+                    <div class="flex justify-center gap-2 items-center text-gray-500">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                        <p>ATS Check</p>
+                    </div>
+                    <div class="flex justify-center gap-2 items-center text-gray-500">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        <p>Skill Analysis</p>
+                    </div>
+                </div>
+                <h1 class="text-4xl font-semibold leading-snug mt-4 sm:text-6xl">Analyze Resume. Accelerate Career.
+                </h1>
+                <p class="text-xl mt-4 sm:text-2xl sm:mt-8 text-gray-800">Transform your job search with AI that makes
+                    you 3× more likely to land interviews and get hired.</p>
+                <div id="buttons-container" class="mt-12 flex gap-4 flex-col sm:flex-row">
+                    <a href="signup.html"><button
+                        class="px-8 py-3 font-semibold rounded-lg text-white bg-primary shadow-sm hover:bg-opacity-90">Upload Resume</button></a>
+                    <a href="sample_resume.html"><button
+                        class="px-8 py-3 font-semibold rounded-lg bg-white border border-gray-400 hover:border-gray-800">View Sample Report</button></a>
+                </div>
+            </div>
+            <div id="companies-container" class="flex flex-col gap-10">
+                <div id="companies-title" class="flex justify-center gap-2">
+                    <img class="translate-y-2" src="./assets/asset 2.svg" alt="">
+                    <span class="font-semibold">HELPING CANDIDATES GET HIRED AT</span>
+                    <img class="-scale-x-100 translate-y-2" src="./assets/asset 2.svg" alt="">
+                </div>
+                <div id="lines-group" class="flex flex-col gap-4">
+                    <div id="line1" class="flex gap-4 w-screen -translate-x-48 transition-transform ease-linear">
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 3.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 4.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">LifeAt</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 5.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Convy</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 6.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Morgen</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 7.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Campsite</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 8.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Rise</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 9.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">ClickUp</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 10.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Notion</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 11.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Sunsama</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 12.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Beeper</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 13.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Cal</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 14.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Webstudio</span>
+                        </div>
+
+                    </div>
+                    <div id="line2" class="flex gap-4 w-screen -translate-x-36 transition-transform ease-linear">
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 15.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 16.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 17.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 18.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 19.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 20.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Moises</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 21.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Basedash</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 22.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Cursor</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 23.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Linear</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 24.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Voiceflow</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 25.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Kitemaker</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 26.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Cron</span>
+                        </div>
+                    </div>
+                    <div id="line3"
+                        class="flex md:hidden gap-4 w-screen -translate-x-48 transition-transform ease-linear">
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 15.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 16.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 17.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 3.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 4.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 5.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 12.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 13.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 14.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 24.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 25.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
+                            <img src="./assets/asset 26.png" class="w-12 h-12 md:w-16 md:h-16" alt="">
+                            <span class="text-[12px] font-semibold lg:text-[16px]">Unbounce1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Step by step  -->
+<div id="steps" class="flex flex-col gap-6 container mt-20">
+    <h2 class="text-5xl sm:font-semibold mb-14">How SkillScan Works</h2>
+
+    <!-- Step 1 -->
+    <div id="step1" class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row justify-between">
+        <div class="flex flex-col gap-6 lg:w-1/2">
+            <span class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium font-display">
+                Step 1
+            </span>
+            <h3 class="text-4xl">Upload Your Resume</h3>
+            <p class="text-lg font-light">
+                Upload your resume in PDF or DOCX format. Our AI instantly reads and prepares it for analysis.
+            </p>
+            <ul class="grid grid-cols-2 gap-2">
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">PDF & DOCX Support</a></li>
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">Instant Parsing</a></li>
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">Secure Processing</a></li>
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">Smart Section Detection</a></li>
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">Experience Extraction</a></li>
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">Skills Identification</a></li>
+            </ul>
+        </div>
+        <div class="pt-12">
+            <img src="./assets/HIW_1.jpeg" alt="">
+        </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div id="step2" class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row justify-between">
+        <div class="flex flex-col gap-6 lg:w-1/2">
+            <span class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium font-display">
+                Step 2
+            </span>
+            <h3 class="text-4xl">AI Resume Analysis</h3>
+            <p class="text-lg font-light">
+                Our AI evaluates your resume against ATS systems and job descriptions to calculate your compatibility score.
+            </p>
+            <ul class="grid grid-cols-2 gap-2">
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">ATS Score Calculation</a></li>
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">Keyword Matching</a></li>
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">Skill Gap Detection</a></li>
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">Formatting Review</a></li>
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">Role-Based Insights</a></li>
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">Performance Breakdown</a></li>
+            </ul>
+        </div>
+        <div class="pt-12">
+            <img src="./assets/HIW_2.jpeg" alt="">
+        </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div id="step3" class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row justify-between">
+        <div class="flex flex-col gap-6 lg:w-1/2">
+            <span class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-medium font-display">
+                Step 3
+            </span>
+            <h3 class="text-4xl">Improve & Download</h3>
+            <p class="text-lg font-light">
+                Apply AI-powered suggestions to optimize your resume and download the improved version instantly.
+            </p>
+            <ul class="grid grid-cols-2 gap-2">
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">One-Click Improvements</a></li>
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">Live Resume Editor</a></li>
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">Before vs After Comparison</a></li>
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">Job Match Score</a></li>
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">Resume Optimization Tips</a></li>
+                <li class="flex gap-4"><i class="fa-solid fa-check text-gray-500"></i><a class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-80" href="">Instant PDF Download</a></li>
+            </ul>
+        </div>
+        <div class="pt-12">
+            <img src="./assets/HIW_3.jpeg" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- Bento Grid -->
+<div id="bento-grid" class="container">
+    <h2 class="text-5xl sm:font-semibold mb-14 max-w-2xl leading-normal">
+        Why Use SkillScan ?
+    </h2>
+
+    <div id="grid-container" class="flex flex-col gap-6 lg:grid lg:grid-cols-3" style="grid-auto-rows: 96px;">
+
+        <div class="row-start-1 row-end-3 group rounded-2xl gradient-hover-outer">
+            <div class="gradient-hover-inner rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center">
+                <h3 class="text-2xl">AI Powered</h3>
+                <p class="text-lg text-center font-light">
+                    SkillScan uses advanced Artificial Intelligence to analyze your resume, skills, and career goals.
+                </p>
+            </div>
+        </div>
+
+        <div class="row-start-1 row-end-4 group rounded-2xl gradient-hover-outer">
+            <div class="rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center gradient-hover-inner">
+                <h3 class="text-2xl">Personalized Paths</h3>
+                <p class="text-lg text-center font-light">
+                    Every user receives a customized learning path designed according to their existing skills, experience level, and career aspirations. This ensures that users focus only on the most relevant skills needed to achieve their professional goals.
+                </p>
+            </div>
+        </div>
+
+        <div class="row-start-1 row-end-3 group rounded-2xl gradient-hover-outer">
+            <div class="gradient-hover-inner rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center">
+                <h3 class="text-2xl">Beginner – Advanced</h3>
+                <p class="text-lg text-center font-light">
+                    Whether someone is starting from the basics or a learner looking to upgrade their expertise, the roadmap adapts to provide suitable learning steps.
+                </p>
+            </div>
+        </div>
+
+        <div class="row-start-3 row-end-6 group rounded-2xl gradient-hover-outer">
+            <div class="rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center gradient-hover-inner">
+                <h3 class="text-2xl">Time-Based Clear Timeline</h3>
+                <p class="text-lg text-center font-light">
+                    This helps users plan their learning journey effectively, manage their time properly, and track how long it may take to achieve specific milestones.
+                </p>
+                
+            </div>
+        </div>
+
+        <div class="row-start-4 row-end-6 group rounded-2xl gradient-hover-outer">
+            <div class="rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center gradient-hover-inner">
+                <h3 class="text-2xl">Progress Tracking</h3>
+                <p class="text-lg text-center font-light">
+                    SkillScan allows users to track their learning progress step-by-step throughout their career roadmap.
+                </p>
+            </div>
+        </div>
+
+        <div class="row-start-3 row-end-6 group rounded-2xl gradient-hover-outer">
+            <div class="rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center gradient-hover-inner">
+                <h3 class="text-2xl">Expert Guidance</h3>
+                <p class="text-lg text-center font-light">
+                    SkillScan roadmaps are built using insights from industry professionals and real-world job requirements. This ensures that users receive practical guidance and learn the skills that employers actually expect in the industry.
+                </p>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Features Line -->
+<div id="features-line" class="container mt-0 lg:mt-4">
+    <div class="border rounded-lg overflow-hidden flex justify-center p-4">
+        <div id="line4" class="flex gap-8 p-6">
+
+            <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">ATS Score Analysis</h3>
+            <span>•</span>
+
+            <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">AI Resume Suggestions</h3>
+            <span>•</span>
+
+            <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">Keyword Matching</h3>
+            <span>•</span>
+
+            <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">Skill Gap Analysis</h3>
+            <span>•</span>
+
+            <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">Resume Optimization</h3>
+            <span>•</span>
+
+            <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">Job Match Score</h3>
+            <span>•</span>
+
+            <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">Instant PDF Download</h3>
+            <span>•</span>
+
+            <h3 class="my-0 mx-2 whitespace-nowrap font-display text-2xl font-semibold leading-7">Secure File Processing</h3>
+            <span>•</span>
+
+        </div>
+    </div>
+</div>
+
+ <!-- Testimonials -->
+<div id="testimonials" class="container">
+    <h2 class="text-5xl sm:font-semibold mb-14">Success stories</h2>
+    <div class="rounded-xl border flex flex-col lg:flex-row items-end">
+        <div class="flex flex-col gap-12 p-8">
+            <div class="h-4 w-fit">
+                <img src="./assets/asset 44.svg" alt="">
+            </div>
+            <h3 class="text-xl leading-relaxed">Students used SkillScan to improve their resumes and increase interview calls within weeks.</h3>
+            <div id="tag-container" class="flex gap-3 flex-wrap">
+                <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                    <i class="fa-solid fa-check"></i>
+                    <span class="font-display font-medium">AI Skill Detection</span>
+                </div>
+                <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                    <i class="fa-solid fa-check"></i>
+                    <span class="font-display font-medium">ATS Score Analysis</span>
+                </div>
+                <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                    <i class="fa-solid fa-check"></i>
+                    <span class="font-display font-medium">Skill Gap Identification</span>
+                </div>
+                <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                    <i class="fa-solid fa-check"></i>
+                    <span class="font-display font-medium">Career Roadmap</span>
+                </div>
+                <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-3 py-1 rounded-md text-yellow-800">
+                    <i class="fa-solid fa-check"></i>
+                    <span class="font-display font-medium">Resume Suggestions</span>
+                </div>
+            </div>
+            <p class="text-lg font-light text-gray-500">“SkillScan helped me identify <span class="text-gray-800">missing backend skills</span> and optimize my resume for ATS systems. After applying the improvements, I started receiving <span class="text-gray-800">more interview calls</span> within a short time.”</p>
+            <div id="user-card" class="flex gap-4">
+                <div class="w-12">
+                    <img src="./assets/asset 45.jpeg" class="rounded-full" alt="">
+                </div>
+                <div class="flex flex-col">
+                    <h3>Rahul Sharma</h3>
+                    <p class="text-gray-500">Final Year Engineering Student</p>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <img src="./assets/asset 46.png" class="pl-12" alt="">
+        </div>
+    </div>
+
+    <div class="flex flex-col lg:flex-row justify-between gap-4 mt-6">
+
+        <div class="rounded-2xl gradient-hover-outer group">
+            <div class="rounded-2xl p-6 gradient-hover-inner flex flex-col gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full">
+                        <i class="fa-solid fa-chart-line text-indigo-800"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">ATS Optimization</h3>
+                </div>
+                <p class="text-lg font-light">SkillScan analyzes resume keywords and structure to ensure higher compatibility with Applicant Tracking Systems used by companies.</p>
+                <div class="flex gap-4">
+                    <div class="flex flex-col">
+                        <h3>Priya Mehta</h3>
+                        <a href="#" class="anchor-hover w-fit text-gray-500">Job Seeker</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rounded-2xl gradient-hover-outer group">
+            <div class="rounded-2xl p-6 gradient-hover-inner flex flex-col gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full">
+                        <i class="fa-solid fa-brain text-indigo-800"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">AI Skill Insights</h3>
+                </div>
+                <p class="text-lg font-light">Our AI engine intelligently extracts technical and soft skills, helping users understand their strengths and areas for improvement.</p>
+                <div class="flex gap-4">
+                    <div class="flex flex-col">
+                        <h3>Amit Verma</h3>
+                        <a href="#" class="anchor-hover w-fit text-gray-500">Software Developer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rounded-2xl gradient-hover-outer group">
+            <div class="rounded-2xl p-6 gradient-hover-inner flex flex-col gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-200 flex items-center justify-center rounded-full">
+                        <i class="fa-solid fa-road text-indigo-800"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold">Career Roadmap</h3>
+                </div>
+                <p class="text-lg font-light">SkillScan generates a personalized learning roadmap to help users acquire in-demand skills and grow confidently in their careers.</p>
+                <div class="flex gap-4">
+                    <div class="flex flex-col">
+                        <h3>Sneha Patel</h3>
+                        <a href="#" class="anchor-hover w-fit text-gray-500">Data Analyst Aspirant</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="rounded-2xl flex flex-col bg-black lg:flex-row mt-12 pt-6 lg:pt-10">
+        <div class="flex flex-col gap-4 p-8 lg:flex-1 lg:gap-8">
+            <span class="text-gray-400 font-display font-medium">READY TO IMPROVE YOUR RESUME?</span>
+            <h2 class="text-4xl text-white leading-tight lg:text-5xl">Start analyzing your resume today</h2>
+            <p class="text-lg font-light text-gray-400 lg:text-xl">Upload your resume and get AI-powered insights, ATS scoring, and a personalized career roadmap in minutes.</p>
+            <a href="signup.html" class="bg-primary text-white py-3 rounded-lg hover:bg-opacity-90 flex justify-center items-center gap-4">
+    <i class="fa-solid fa-upload"></i>
+    <span>Upload Resume Now</span>
+</a>
+            <p class="text-gray-400 text-xs italic leading-tight">*Basic resume analysis is free. Advanced features may require a premium plan.</p>
+        </div>
+        <div class="lg:w-1/2">
+            <img src="./assets/asset 46.png" class="pl-12" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- Pricing -->
+<div id="pricing" class="container">
+    <h2 class="h2-style">Choose a plan that fits your needs</h2>
+    <div class="flex flex-col lg:flex-row mt-6 gap-6">
+
+        <!-- Free Plan -->
+        <div class="border flex-1 rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 lg:border-none lg:bg-slate-50">
+            <h3 class="text-4xl">Free</h3>
+            <p class="text-lg font-light">
+                For students and job seekers getting started with resume analysis.
+            </p>
+            <p class="uppercase">Key Features</p>
+            <ul class="space-y-3">
+                <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-check text-gray-500"></i>
+                    <span class="text-lg font-light text-gray-800">Resume Upload (PDF/DOCX)</span>
+                </li>
+                <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-check text-gray-500"></i>
+                    <span class="text-lg font-light text-gray-800">Basic Skill Extraction</span>
+                </li>
+                <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-xmark text-gray-500"></i>
+                    <span class="text-lg font-light text-gray-800">Advanced ATS Score</span>
+                </li>
+                <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-xmark text-gray-500"></i>
+                    <span class="text-lg font-light text-gray-800">Personalized Career Roadmap</span>
+                </li>
+            </ul>
+          <a href="signup.html"
+   class="border px-8 py-3 text-primary rounded-lg hover:border-gray-800 font-display font-medium inline-flex justify-center items-center text-center">
+   Get Started
+</a>
+        </div>
+
+        <!-- Essential Plan -->
+        <div class="border flex-1 rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 lg:border-none lg:bg-slate-50">
+            <h3 class="text-4xl">Essential</h3>
+            <p class="text-lg font-light">For serious candidates improving interview chances.</p>
+            <p class="text-lg font-light"><span class="text-2xl font-semibold">₹299</span>/month</p>
+            <p class="uppercase">Key Features</p>
+            <ul class="space-y-3">
+                <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-check text-gray-500"></i>
+                    <span class="text-lg font-light text-gray-800">Everything in Free Plan</span>
+                </li>
+                <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-check text-gray-500"></i>
+                    <span class="text-lg font-light text-gray-800">Detailed ATS Compatibility Score</span>
+                </li>
+                <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-check text-gray-500"></i>
+                    <span class="text-lg font-light text-gray-800">Resume Improvement Suggestions</span>
+                </li>
+                <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-xmark text-gray-500"></i>
+                    <span class="text-lg font-light text-gray-800">Downloadable PDF Report</span>
+                </li>
+            </ul>
+            <button
+                class="border px-8 py-3 text-primary rounded-lg hover:border-gray-800 font-display font-medium">
+                Upgrade Plan
+            </button>
+        </div>
+
+        <!-- Professional Plan -->
+        <div
+            class="border flex-1 relative rounded-xl px-8 pt-12 pb-8 flex flex-col gap-6 lg:border-none lg:bg-slate-50">
+            <p
+                class="text-blue-800 text-sm bg-indigo-100 rounded-full w-fit px-4 py-2 font-display font-semibold absolute top-0 right-8 -translate-y-1/2">
+                Most Popular</p>
+            <h3 class="text-4xl">Professional</h3>
+            <p class="text-lg font-light">For advanced career growth and full AI insights.</p>
+            <p class="text-lg font-light"><span class="text-2xl font-semibold">₹599</span>/month</p>
+            <p class="uppercase">Key Features</p>
+            <ul class="space-y-3">
+                <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-check text-gray-500"></i>
+                    <span class="text-lg font-light text-gray-800">Everything in Essential Plan</span>
+                </li>
+                <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-check text-gray-500"></i>
+                    <span class="text-lg font-light text-gray-800">Personalized Career Roadmap</span>
+                </li>
+                <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-check text-gray-500"></i>
+                    <span class="text-lg font-light text-gray-800">Downloadable PDF Report</span>
+                </li>
+                <li class="flex items-center gap-4">
+                    <i class="fa-solid fa-check text-gray-500"></i>
+                    <span class="text-lg font-light text-gray-800">Priority Support</span>
+                </li>
+            </ul>
+            <button
+                class="px-8 py-3 text-white bg-primary rounded-lg hover:bg-opacity-90 font-display font-medium">
+                Go Professional
+            </button>
+        </div>
+
+    </div>
+</div>
+
+        <!-- FAQs -->
+        <div id="faq" class="container">
+            <h2 class="h2-style">FAQs</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 mt-6 gap-6 items-start">
+                <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="cursor-pointer flex justify-between items-center" aria-controls="faq-1">
+                        <p class="font-semibold text-lg">What is SkillScan and how does it work?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                    </dt>
+                    <dd id="faq-1" class="hidden text-lg font-light mt-6">
+                        <p>SkillScan is an AI-powered resume analyzer that evaluates your resume, extracts key skills,
+                            checks ATS compatibility, and provides personalized career improvement suggestions. Simply
+                            upload your resume, and the system generates a detailed analysis report within seconds.</p>
+                    </dd>
+                </div>
+                <div class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="flex justify-between items-center" aria-controls="faq-2">
+                        <p class="font-semibold text-lg">Is SkillScan free to use?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                    </dt>
+                    <dd id="faq-2" class="hidden text-lg font-light mt-6">
+                        <p>Yes. SkillScan offers a free version that allows users to upload their resume and receive
+                            basic skill analysis and improvement suggestions. Advanced features may be included in
+                            future premium plans.</p>
+                    </dd>
+                </div>
+                <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="cursor-pointer flex justify-between items-center" aria-controls="faq-3">
+                        <p class="font-semibold text-lg">What file formats are supported?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                    </dt>
+                    <dd id="faq-3" class="hidden text-lg font-light mt-6">
+                        <p>SkillScan currently supports:
+
+                            PDF (.pdf)
+
+                            Word Documents (.docx)
+
+                            More formats may be added in future updates.</p>
+                    </dd>
+                </div>
+                <div class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="flex justify-between items-center" aria-controls="faq-4">
+                        <p class="font-semibold text-lg">How accurate is the AI analysis?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                    </dt>
+                    <dd id="faq-4" class="hidden text-lg font-light mt-6">
+                        <p>SkillScan uses intelligent text extraction and natural language processing techniques to
+                            identify skills, keywords, and experience. While it provides strong insights, users should
+                            review suggestions carefully before making final resume changes.</p>
+                    </dd>
+                </div>
+                <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="cursor-pointer flex justify-between items-center" aria-controls="faq-5">
+                        <p class="font-semibold text-lg">Can SkillScan guarantee I will get a job?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                    </dt>
+                    <dd id="faq-5" class="hidden text-lg font-light mt-6">
+                        <p> No tool can guarantee a job. However, SkillScan helps optimize your resume, identify skill
+                            gaps, and improve ATS compatibility — significantly increasing your chances of landing
+                            interviews.</p>
+                    </dd>
+                </div>
+                <div class="group cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6">
+                    <dt class="flex justify-between items-center" aria-controls="faq-6">
+                        <p class="font-semibold text-lg">Is my resume data secure?</p>
+                        <i class="fa-solid fa-chevron-up -rotate-180 transition-transform"></i>
+                    </dt>
+                    <dd id="faq-6" class="hidden text-lg font-light mt-6">
+                        <p>Yes. Your resume is processed securely and is not shared with third parties. User privacy and
+                            data protection are a top priority for SkillScan.</p>
+                    </dd>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+<footer class="bg-slate-900 text-gray-300 pt-16 pb-6">
+  
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Grid Container -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <!-- Company Info -->
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-5">SkillScan</h2>
+        <p class="text-gray-400 leading-relaxed mb-6">
+          AI-powered resume analysis and smart career roadmap guidance 
+          to help students and professionals grow faster.
+        </p>
+
+        <!-- Social Icons -->
+        <div class="flex space-x-4">
+          <a href="#" class="w-9 h-9 bg-slate-700 flex items-center justify-center rounded-full hover:bg-orange-500 transition">
+            <i class="fab fa-facebook-f text-white text-sm"></i>
+          </a>
+          <a href="#" class="w-9 h-9 bg-slate-700 flex items-center justify-center rounded-full hover:bg-orange-500 transition">
+            <i class="fab fa-instagram text-white text-sm"></i>
+          </a>
+          <a href="#" class="w-9 h-9 bg-slate-700 flex items-center justify-center rounded-full hover:bg-orange-500 transition">
+            <i class="fab fa-twitter text-white text-sm"></i>
+          </a>
+          <a href="#" class="w-9 h-9 bg-slate-700 flex items-center justify-center rounded-full hover:bg-orange-500 transition">
+            <i class="fab fa-linkedin-in text-white text-sm"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Our Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-5 text-white">Our Links</h3>
+        <ul class="space-y-3 text-gray-400">
+          <li><a href="index.html" class="hover:text-orange-500 transition">Home</a></li>
+          <li><a href="aboutus.html" class="hover:text-orange-500 transition">About Us</a></li>
+          <li><a href="pricing.html" class="hover:text-orange-500 transition">Pricing</a></li>
+          <li><a href="how_it_works.html" class="hover:text-orange-500 transition">How It Works</a></li>
+          <li><a href="contactus.html" class="hover:text-orange-500 transition">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Our Services -->
+      <div>
+        <h3 class="text-lg font-semibold mb-5 text-white">Our Services</h3>
+        <ul class="space-y-3 text-gray-400">
+          <li><a  class="hover:text-orange-500 transition">Resume Analysis</a></li>
+          <li><a  class="hover:text-orange-500 transition">Career Roadmap</a></li>
+          <li><a  class="hover:text-orange-500 transition">Skill Gap Detection</a></li>
+          <li><a  class="hover:text-orange-500 transition">AI Suggestions</a></li>
+          
+        </ul>
+      </div>
+
+      
+
+      <!-- Contact Us -->
+      <div>
+        <h3 class="text-lg font-semibold mb-5 text-white">Contact Us</h3>
+
+        <div class="space-y-4 text-gray-400">
+
+          <div class="flex items-start space-x-3">
+            <i class="fa-solid fa-phone text-white-500 mt-1"></i>
+            <div>
+              <p>+91 98765 43210</p>
+              <p>+91 91234 56789</p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-3">
+            <i class="fa-solid fa-envelope text-white-500 mt-1"></i>
+            <div>
+              <p>info@skillscan.com</p>
+              <p>support@skillscan.com</p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-3">
+            <i class="fa-solid fa-location-dot text-white-500 mt-1"></i>
+            <div>
+              <p>Vadodara, Gujarat, India</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-slate-700 mt-12 pt-6 text-center text-gray-500 text-sm">
+      © 2026 <span class="text-white font-semibold">SkillScan</span>. All Rights Reserved.
+    </div>
+
+  </div>
+
+</footer>
+
+<button id="goTopBtn"
+class="fixed bottom-6 right-6 bg-white border border-gray-300 text-slate-900 w-12 h-12 rounded-xl shadow-xl hover:shadow-2xl flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-gray-100">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+</body>
+<script src="script.js"></script>
+
+</html>
