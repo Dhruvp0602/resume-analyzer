@@ -1,0 +1,302 @@
+{
+  "Software Developer": {
+    "title": "Software Developer",
+    "description": "Build full-stack applications, learn architecture, and collaborate with product teams.",
+    "steps": [
+      {
+        "title": "Foundation Skills",
+        "description": "Learn programming fundamentals (variables, control flow, data structures), Git, and basic problem-solving.",
+        "level": "Beginner",
+        "duration": "2-3 Months",
+        "tags": ["Programming", "Git", "Algorithms"],
+        "icon": "fa-code"
+      },
+      {
+        "title": "Core Technologies",
+        "description": "Master a modern frontend framework (React/Vue/Angular), backend (Node.js/Express), and databases (SQL/NoSQL).",
+        "level": "Intermediate",
+        "duration": "3-4 Months",
+        "tags": ["Frontend", "Backend", "Databases"],
+        "icon": "fa-laptop-code"
+      },
+      {
+        "title": "Advanced Concepts",
+        "description": "Learn testing, performance optimization, deployment, and system design for scalable apps.",
+        "level": "Advanced",
+        "duration": "4-5 Months",
+        "tags": ["Testing", "DevOps", "Architecture"],
+        "icon": "fa-layer-group"
+      },
+      {
+        "title": "Practical Experience",
+        "description": "Build real projects, contribute to open source, and solve real-world problems to strengthen your portfolio.",
+        "level": "Expert",
+        "duration": "3-6 Months",
+        "tags": ["Projects", "Open Source", "Collaboration"],
+        "icon": "fa-briefcase"
+      },
+      {
+        "title": "Career Launch",
+        "description": "Prepare your resume, profile, and interview skills to land your first (or next) developer role.",
+        "level": "Ready",
+        "duration": "1-2 Months",
+        "tags": ["Resume", "Interview", "Networking"],
+        "icon": "fa-rocket"
+      }
+    ]
+  },
+  "Data Scientist": {
+    "title": "Data Scientist",
+    "description": "Extract insights from data, build models, and communicate results to stakeholders.",
+    "steps": [
+      {
+        "title": "Statistics & Python",
+        "description": "Learn statistics, probability, Python programming, and libraries like pandas and numpy.",
+        "level": "Beginner",
+        "duration": "2-3 Months",
+        "tags": ["Statistics", "Python", "Data Manipulation"],
+        "icon": "fa-chart-line"
+      },
+      {
+        "title": "Machine Learning Basics",
+        "description": "Understand supervised and unsupervised learning, and implement models with scikit-learn.",
+        "level": "Intermediate",
+        "duration": "3-4 Months",
+        "tags": ["ML", "scikit-learn", "Modeling"],
+        "icon": "fa-brain"
+      },
+      {
+        "title": "Advanced Modeling",
+        "description": "Explore deep learning, time series, and model evaluation techniques.",
+        "level": "Advanced",
+        "duration": "4-5 Months",
+        "tags": ["Deep Learning", "Time Series", "Evaluation"],
+        "icon": "fa-robot"
+      },
+      {
+        "title": "Real-World Projects",
+        "description": "Build end-to-end projects, deploy models, and work with large datasets.",
+        "level": "Expert",
+        "duration": "3-6 Months",
+        "tags": ["Deployment", "Big Data", "Projects"],
+        "icon": "fa-project-diagram"
+      },
+      {
+        "title": "Job Preparation",
+        "description": "Polish your portfolio, craft case studies, and practice interviews for data science roles.",
+        "level": "Ready",
+        "duration": "1-2 Months",
+        "tags": ["Portfolio", "Interview", "Networking"],
+        "icon": "fa-user-tie"
+      }
+    ]
+  },
+  "UI/UX Designer": {
+    "title": "UI/UX Designer",
+    "description": "Design user-friendly interfaces and create exceptional user experiences.",
+    "steps": [
+      {
+        "title": "Design Fundamentals",
+        "description": "Learn color theory, typography, layout, visual hierarchy, and design principles.",
+        "level": "Beginner",
+        "duration": "1-2 Months",
+        "tags": ["Design", "Typography", "Color Theory"],
+        "icon": "fa-palette"
+      },
+      {
+        "title": "Design Tools",
+        "description": "Master Figma, Adobe XD, Sketch, and prototyping tools for wireframes and mockups.",
+        "level": "Beginner",
+        "duration": "2-3 Months",
+        "tags": ["Figma", "Adobe XD", "Prototyping"],
+        "icon": "fa-pen-nib"
+      },
+      {
+        "title": "User Research",
+        "description": "Conduct user interviews, surveys, and create personas to understand user needs.",
+        "level": "Intermediate",
+        "duration": "2-3 Months",
+        "tags": ["Research", "Personas", "Interviews"],
+        "icon": "fa-users"
+      },
+      {
+        "title": "Wireframing & Prototyping",
+        "description": "Create wireframes, interactive prototypes, and user flows for applications.",
+        "level": "Intermediate",
+        "duration": "2-3 Months",
+        "tags": ["Wireframes", "Prototypes", "User Flows"],
+        "icon": "fa-drafting-compass"
+      },
+      {
+        "title": "Build Portfolio",
+        "description": "Create case studies showcasing your design process and solutions.",
+        "level": "Advanced",
+        "duration": "Ongoing",
+        "tags": ["Portfolio", "Case Studies", "Projects"],
+        "icon": "fa-briefcase"
+      }
+    ]
+  },
+  "DevOps Engineer": {
+    "title": "DevOps Engineer",
+    "description": "Automate infrastructure, manage deployments, and ensure system reliability.",
+    "steps": [
+      {
+        "title": "Linux & Command Line",
+        "description": "Master Linux fundamentals, shell scripting, and command-line tools.",
+        "level": "Beginner",
+        "duration": "1-2 Months",
+        "tags": ["Linux", "Shell", "CLI"],
+        "icon": "fa-terminal"
+      },
+      {
+        "title": "Version Control & Git",
+        "description": "Learn Git, GitHub, GitLab, and CI/CD pipeline integration.",
+        "level": "Beginner",
+        "duration": "1 Month",
+        "tags": ["Git", "GitHub", "Version Control"],
+        "icon": "fa-code-branch"
+      },
+      {
+        "title": "Containerization",
+        "description": "Learn Docker, Kubernetes, and container orchestration.",
+        "level": "Intermediate",
+        "duration": "3-4 Months",
+        "tags": ["Docker", "Kubernetes", "Containers"],
+        "icon": "fa-box"
+      },
+      {
+        "title": "CI/CD Pipelines",
+        "description": "Automate build, test, and deployment with Jenkins, GitHub Actions.",
+        "level": "Intermediate",
+        "duration": "2-3 Months",
+        "tags": ["CI/CD", "Jenkins", "Automation"],
+        "icon": "fa-arrows-spin"
+      },
+      {
+        "title": "Cloud Platforms",
+        "description": "Master AWS, Azure, or GCP services and cloud architecture.",
+        "level": "Advanced",
+        "duration": "3-4 Months",
+        "tags": ["AWS", "Azure", "Cloud"],
+        "icon": "fa-cloud"
+      },
+      {
+        "title": "Infrastructure as Code",
+        "description": "Learn Terraform, Ansible for automating infrastructure.",
+        "level": "Advanced",
+        "duration": "2-3 Months",
+        "tags": ["Terraform", "Ansible", "IaC"],
+        "icon": "fa-file-code"
+      }
+    ]
+  },
+  "Product Manager": {
+    "title": "Product Manager",
+    "description": "Define product strategy, manage roadmaps, and drive product success.",
+    "steps": [
+      {
+        "title": "Product Management Basics",
+        "description": "Learn product lifecycle, roadmaps, and the PM role.",
+        "level": "Beginner",
+        "duration": "1-2 Months",
+        "tags": ["Product", "Roadmaps", "Strategy"],
+        "icon": "fa-lightbulb"
+      },
+      {
+        "title": "Market Research",
+        "description": "Conduct competitive analysis and identify customer pain points.",
+        "level": "Beginner",
+        "duration": "2-3 Months",
+        "tags": ["Research", "Analysis", "Market"],
+        "icon": "fa-magnifying-glass-chart"
+      },
+      {
+        "title": "User Research",
+        "description": "Learn user interviews, surveys, and persona creation.",
+        "level": "Intermediate",
+        "duration": "2-3 Months",
+        "tags": ["Users", "Personas", "Research"],
+        "icon": "fa-users"
+      },
+      {
+        "title": "Agile & Scrum",
+        "description": "Master Agile, Scrum, sprint planning, and backlog management.",
+        "level": "Intermediate",
+        "duration": "1-2 Months",
+        "tags": ["Agile", "Scrum", "Sprint"],
+        "icon": "fa-diagram-project"
+      },
+      {
+        "title": "Data-Driven Decisions",
+        "description": "Learn analytics tools and A/B testing for product decisions.",
+        "level": "Advanced",
+        "duration": "2-3 Months",
+        "tags": ["Analytics", "A/B Testing", "Data"],
+        "icon": "fa-chart-pie"
+      },
+      {
+        "title": "Product Launch",
+        "description": "Plan launches, go-to-market strategies, and drive growth.",
+        "level": "Advanced",
+        "duration": "2-3 Months",
+        "tags": ["Launch", "GTM", "Growth"],
+        "icon": "fa-rocket"
+      }
+    ]
+  },
+  "Machine Learning Engineer": {
+    "title": "Machine Learning Engineer",
+    "description": "Build, train, and deploy machine learning models at scale.",
+    "steps": [
+      {
+        "title": "Python Programming",
+        "description": "Master Python, NumPy, Pandas for ML development.",
+        "level": "Beginner",
+        "duration": "2-3 Months",
+        "tags": ["Python", "NumPy", "Pandas"],
+        "icon": "fa-python"
+      },
+      {
+        "title": "Mathematics for ML",
+        "description": "Study linear algebra, calculus, probability, and statistics.",
+        "level": "Beginner",
+        "duration": "2-3 Months",
+        "tags": ["Math", "Statistics", "Algebra"],
+        "icon": "fa-square-root-variable"
+      },
+      {
+        "title": "Machine Learning Algorithms",
+        "description": "Learn supervised, unsupervised learning, and ensemble methods.",
+        "level": "Intermediate",
+        "duration": "3-4 Months",
+        "tags": ["ML", "Algorithms", "Models"],
+        "icon": "fa-brain"
+      },
+      {
+        "title": "Deep Learning",
+        "description": "Master TensorFlow, PyTorch, CNNs, RNNs, and transformers.",
+        "level": "Advanced",
+        "duration": "3-4 Months",
+        "tags": ["Deep Learning", "Neural Networks", "AI"],
+        "icon": "fa-network-wired"
+      },
+      {
+        "title": "MLOps & Deployment",
+        "description": "Deploy models using Flask, Docker, Kubernetes, and cloud.",
+        "level": "Advanced",
+        "duration": "2-3 Months",
+        "tags": ["MLOps", "Deployment", "Cloud"],
+        "icon": "fa-cloud-arrow-up"
+      },
+      {
+        "title": "Build ML Projects",
+        "description": "Work on real-world ML projects and applications.",
+        "level": "Expert",
+        "duration": "Ongoing",
+        "tags": ["Projects", "Portfolio", "Applications"],
+        "icon": "fa-folder-open"
+      }
+    ]
+  }
+}

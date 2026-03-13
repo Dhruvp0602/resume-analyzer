@@ -20,6 +20,8 @@
   "bugs": {
     "url": "https://github.com/Anuj-Kumar-Sharma/tailwind-landing-page/issues"
   },
-  "homepage": "https://github.com/Anuj-Kumar-Sharma/tailwind-landing-page#readme"
+  "homepage": "https://github.com/Anuj-Kumar-Sharma/tailwind-landing-page#readme",
+  "dependencies": {
+    "puppeteer": "^24.39.0"
+  }
 }
-
